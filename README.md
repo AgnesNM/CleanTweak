@@ -23,11 +23,11 @@ The technologies used this far:
 ## Contribution - BDD
 If you would like to contribute to this project, the following BDD specs should help you:smile:
 
-Behavior                                          |  Input Example              | Output Example
---------------------------------------------------|-----------------------------|------------------------------------------------------------------------------
-Allow the user to enter brand name                | [CatFeed Solutions Ltd]     | [CatFeed Solutions Ltd]
-Allow the user to enter year of published content | [2005]                      | [2005]
-Allow the user to get results on click            | [Get Content]               | [Downloadable Collated content - csv file with links/zip files with images/videos]
+Behavior                                                    |  Input Example              | Output Example
+------------------------------------------------------------|-----------------------------|------------------------------------------------------------------------------
+Allow the user to enter brand name                          | [CatFeed Solutions Ltd]     | [CatFeed Solutions Ltd]
+Allow the user to enter month and year of published content | [2005]                      | [2005]
+Allow the user to get results on click                      | [Get Content]               | [Downloadable Collated content - csv file with links/zip files with images/videos]
 
 ## License
 Detailed license information can be found here: [License information](LICENSE.md) Copyright (c) 2019 ** Agnes Mwaniki *
