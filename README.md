@@ -15,7 +15,7 @@ The technologies used this far:
 * CSS (jQuery v3.3.1, mdBootstrap)
 * JavaScript
 
-##Setup/Installation Requirements
+## Setup/Installation Requirements
 * Linux OS
 * Text Editor (Atom, Visual Studio Code)
 * Linux Terminal
@@ -23,8 +23,8 @@ The technologies used this far:
 ## Contributioon - BDD
 If you would like to contribute to this project, the following BDD specs should help you:smile:
 Behavior                                          |  Input Example              | Output Example
---------------------------------------------------|-----------------------------|-------------------------------------------------------------------------
-Allow the user to enter brand name                | [CatFeed Solutions Ltd]     | [CatFeed Solutions Lts]
+--------------------------------------------------|-----------------------------|----------------------------------------
+Allow the user to enter brand name                | [CatFeed Solutions Ltd]     | [CatFeed Solutions Ltd]
 Allow the user to enter year of published content | [2005]                      | [2005]
 Allow the user to get results on click            | [Get Content]               | [Collated content]
 
