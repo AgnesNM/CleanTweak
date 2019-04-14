@@ -2,11 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Clean Tweak</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>CleanTweak</title>
   </head>
   <body>
-    <h1>Clean Tweak</h1>
-    <p>A digital marketing tool that helps you collate all your published old content into one place</p>
-      <script src="js/scripts.js" type="text/javascript"></script>             
+    <h1>CleanTweak</h1>
+    <p>A digital marketing tool that helps you collate all your
+       published old content into one place.</p>
+    <div class="brandData">
+      <form class="inputData" action="index.html" method="post">
+        <label for="brand">Enter your brand name</label>
+        <input id="brandName"type="text" name="" value=""><br>
+        <label for="month">Enter date</label>
+        <input id="pubMonth"type="month" name="" value=""><br>
+        <label for="content">Enter Content Type</label>
+        <input id="contentType" type="text" name="" value=""><br>
+      </form>
+      <button id="collate" type="submit" name="button" onclick="collateContent()">GET DATA</button>
+    </div>
+    <div id="output">
+
+    </div>
+      <script src="js/scripts.js" type="text/javascript"></script>
   </body>
 </html>
