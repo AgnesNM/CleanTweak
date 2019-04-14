@@ -20,8 +20,9 @@ The technologies used this far:
 * Text Editor (Atom, Visual Studio Code)
 * Linux Terminal
 
-## Contributioon - BDD
+## Contribution - BDD
 If you would like to contribute to this project, the following BDD specs should help you:smile:
+
 Behavior                                          |  Input Example              | Output Example
 --------------------------------------------------|-----------------------------|----------------------------------------
 Allow the user to enter brand name                | [CatFeed Solutions Ltd]     | [CatFeed Solutions Ltd]
