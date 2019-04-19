@@ -2,7 +2,7 @@
 CleanTweak is a digital marketing tool that collates all your old published content. This should help marketers and marketing teams to repackage it in the most creative ways possible.
 
 #### 13th April 2019
-#### Agnes MWaniki (agnesndutamwaniki@gmail.com)
+#### Agnes Mwaniki (agnesndutamwaniki@gmail.com)
 
 ## Introduction
 This is a project that is to be pitched a month from now at East Africa Com. I kid you not, it was an idea that was born 2 days ago, and I intend to get all the help I can, and learn as much to make it a success.
@@ -11,10 +11,10 @@ CleanTweak is a digital marketing tool that collates all your old published cont
 
 Here is an illustrative sketch:
 
-![Home](Home.png)
-![Search](Search.png)
-![Results](Results.png)
-![Download Results](Download Results.png)
+![Home](images/Home.png)
+![Search](images/Search.png)
+![Results](images/Results.png)
+![Download](images/Download.png)
 ## Technologies
 The technologies used this far:
 * HTML
