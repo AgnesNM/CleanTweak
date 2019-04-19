@@ -9,6 +9,12 @@ This is a project that is to be pitched a month from now at East Africa Com. I k
 
 CleanTweak is a digital marketing tool that collates all your old published content. This should help marketers and marketing teams to repackage it in the most creative ways possible. How it should work is that the user should input their brand name and year, and then the tool should collate and output all the published content types it can find online.
 
+Here is an illustrative sketch:
+
+![Home](Home.png)
+![Search](Search.png)
+![Results](Results.png)
+![Download Results](Download Results.png)
 ## Technologies
 The technologies used this far:
 * HTML
