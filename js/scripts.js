@@ -16,9 +16,36 @@ function collateContent() {
 		document.getElementById('output').innerHTML = "Sorry, we did not find content for this period."
 	}
 	var postData = {
-		business: "business",
-		published: "published",
-		category: "category",
+		business: business,
+		published:published,
+		category: category,
 	};
 	firebase.database().ref().child('post').push(postData).key;
 };
+
+//retrieve data
+function retrieveData(){
+	var retrieve = firebase.database().ref('post');
+	retrieve.on("value",function(data){
+		console.log(data.val());
+		if (data.exists()) {
+			var content = "";
+			data.forEach(function(data){
+				var validate = data.val();
+				content += `
+						<div class="card">
+							<div class="card-body bg-danger text-center">
+								${validate.business}
+							</div>
+						</div>
+				`;
+			});
+			document.getElementById('output').innerHTML = content;
+		} else {
+
+		}
+	},function (error){
+		console.log(error.code);
+	});
+}
+retrieveData();
