@@ -6,6 +6,9 @@
 	  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><!-- Material Design Bootstrap -->
 	  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="js/scripts2.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
     <title>CleanTweak</title>
   </head>
   <body>
@@ -70,7 +73,7 @@
     <p>A digital marketing tool that helps you collate all your
        published old content into one place.</p>
     <div class="brandData">
-      <form class="inputData" action="index.html" method="post">
+      <form class="inputData" id="inputForm">
         <label for="brand">Enter your brand name</label>
         <input id="brandName"type="text" name="" value=""><br>
         <label for="month">Enter date</label>
@@ -88,6 +91,57 @@
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js" type="text/javascript"></script> <!-- Bootstrap core JavaScript -->
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script> <!-- MDB core JavaScript -->
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js" type="text/javascript"></script>
-      <script src="js/scripts.js" type="text/javascript"></script>
+
+    <footer class="page-footer font-small red pt-4">
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase">CLEANTWEAK</h5>
+            <p>CleanTweak is a digital marketing tool that collates all your
+              'old'published content to allow your marketing team to repackage it the way that best suits your brand.</p>
+          </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-3 mb-md-0 mb-3">  
+
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+            <li>
+              <a href="#">Link 4</a>
+            </li>
+          </ul>
+          </div>
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Links</h5>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+            <li>
+              <a href="#">Link 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">2019 Copyright:
+        <a href="#">Lifeline Content Solutions</a>
+      </div>
+
+  </div>
+    </footer>
   </body>
 </html>
