@@ -15,3 +15,7 @@ a{
 .card-body{
   overflow: hidden;
 }
+#logo{
+  height:60px;
+  width:auto;
+}
