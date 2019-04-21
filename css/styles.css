@@ -7,3 +7,11 @@ input{
 a{
   color:black;
 }
+.displayImg{
+  overflow:hidden;
+  height:10em;
+  width:auto;
+}
+.card-body{
+  overflow: hidden;
+}

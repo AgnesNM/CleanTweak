@@ -20,7 +20,7 @@ function collateContent() {
 		published:published,
 		category: category,
 	};
-	firebase.database().ref().child('post').push(postData).key;
+	// firebase.database().ref().child('post').push(postData).key;
 };
 
 //retrieve data
@@ -35,7 +35,9 @@ function retrieveData(){
 				content += `
 						<div class="card">
 							<div class="card-body bg-danger text-center">
-								${validate.business}
+								<p>${validate.business}</p>
+									<img class="displayImg" src="${validate.image}" alt="">
+										<p>${validate.published}</p>
 							</div>
 						</div>
 				`;
