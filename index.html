@@ -53,22 +53,22 @@
 		</nav>
 	</div>
 	<div class="container-fluid">
-		<h1>CleanTweak</h1>
-		<p>A digital marketing tool that helps you collate all your published old content into one place.</p>
-		<div class="brandData">
-			<form class="text-center border border-light p-5">
-				<p class="h4 mb-4"></p>
-				<div class="form-row mb-4">
-					<input type="text" class="form-control" id="brandName" placeholder="brand name"><br>
-					<input class="form-control" id="pubMonth" type="month" placeholder="yyyy/mm">
-					<input class="form-control mb-4" id="contentType" placeholder="category" type="text"><br>
-				</div>
-			</form>
-      <a href="results.html"><button type="submit" name="button" id="collate" class="btn btn-danger" onclick="collateContent()">
-        GET CONTENT</button>
-
-		</div>
+	  <h1>CleanTweak</h1>
+	  <p>A digital marketing tool that helps you collate all your published old content into one place.</p>
+	  <div class="brandData">
+	    <div class="text-center border border-light p-5">
+	      <p class="h4 mb-4"></p>
+	      <div class="form-row mb-4">
+	        <input type="text" class="form-control" id="brandName" placeholder="brand name" required><br>
+	        <input class="form-control" id="pubMonth" type="month" placeholder="yyyy/mm" required>
+	        <input class="form-control mb-4" id="contentType" placeholder="category" type="text" required><br>
+					<button type="submit" name="button" id="collate" class="btn btn-danger" onclick="collateContent()">
+			      GET CONTENT</button>
+	      </div>
+	    </div>
+	  </div>
 	</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
 	</script> <!-- Bootstrap tooltips -->
 

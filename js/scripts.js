@@ -10,23 +10,23 @@ function collateContent() {
 	var business = document.getElementById('brandName').value;
 	var published = document.getElementById('pubMonth').value;
 	var category = document.getElementById('contentType').value;
-	 if ((business === "Adtech digital") && (published === "2016-03") && (category === "image")) {
-		document.getElementById('output').innerHTML = brand["image"];
-	 } else {
-		document.getElementById('output').innerHTML = "Sorry, we did not find content for this period."
-	}
+	//  if ((business === "Adtech digital") && (published === "2016-03") && (category === "image")) {
+	// 	document.getElementById('output').innerHTML = brand["image"];
+	//  } else {
+	// 	document.getElementById('output').innerHTML = "Sorry, we did not find content for this period."
+	// }
 	var postData = {
 		business: business,
 		published:published,
 		category: category,
 	};
-	// firebase.database().ref().child('post').push(postData).key;
+	window.location = "results.html";
 };
-
+retrieveData("fish ltd");
 //retrieve data
-function retrieveData(){
+function retrieveData(business){
 	var retrieve = firebase.database().ref('post');
-	retrieve.on("value",function(data){
+	retrieve.orderByChild("business").equalTo(business).on("value",function(data){
 		console.log(data.val());
 		if (data.exists()) {
 			var content = "";
@@ -50,4 +50,3 @@ function retrieveData(){
 		console.log(error.code);
 	});
 }
-retrieveData();
