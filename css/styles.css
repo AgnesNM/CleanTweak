@@ -1,11 +1,20 @@
 input{
   margin: 1%;
 }
-#collate{
+button{
   background-color: #B22222;
+  color:white;
+  margin-top: 2%;
 }
+
 a{
   color:black;
+}
+h1{
+  text-align: center;
+}
+#clean{
+  text-align: center;
 }
 .displayImg{
   overflow:hidden;
@@ -18,4 +27,16 @@ a{
 #logo{
   height:60px;
   width:auto;
+}
+#price{
+  text-align: center;
+}
+.card-deck{
+  margin-bottom: 2%;
+}
+@media screen and (max-width:767px) {
+  [.class="card"]{
+    width: 100%;
+    display: block;
+    }
 }
