@@ -64,14 +64,16 @@
 					<input class="form-control" id="pubMonth" placeholder="yyyy-mm" required="" type="month">
 					<label data-error="wrong" data-success="right" for="contentType">Content Type:</label>
 					<input class="form-control mb-4" id="contentType" required="" type="text"><br>
-					<button class="btn btn-danger" id="collate" name="button" type="submit">GET CONTENT</button>					
+					<button class="btn btn-danger" id="collate" name="button" type="submit">GET CONTENT</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="container-fluid">
 	<div class="card-columns" id="output">
-
+	<div id="loader" class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
 	</div>
 </div>
 	<script src="js/scripts3.js" type="text/javascript"></script>
