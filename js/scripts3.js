@@ -9,7 +9,7 @@ function inputData (){
   let published = document.getElementById('pubMonth').value;
   let category = document.getElementById('contentType').value;
   let retrieve = firebase.database().ref('post');
-  retrieve.orderByChild("business","published",).equalTo(business).on("value",function(data){//rewrite this function, start here
+  retrieve.orderByChild("business").equalTo(business).on("value",function(data){
     console.log(data.val());
     if (data.val()!=null) {
       var content = "";
@@ -25,7 +25,7 @@ function inputData (){
             </div>
         `;
       });
-      
+
     } else {
       content =`<div class="streak">
         <img src="https://firebasestorage.googleapis.com/v0/b/clean-tweak.appspot.com/o/gifs%2F200w.webp?alt=media&token=9ed06448-1b65-415e-ab99-7b39de6b7423" alt="">
