@@ -27,7 +27,7 @@ function inputData (){
       });
 
     } else {
-      content =`<div class="streak">
+      content =`<div class="noresults">
         <img src="https://firebasestorage.googleapis.com/v0/b/clean-tweak.appspot.com/o/gifs%2F200w.webp?alt=media&token=9ed06448-1b65-415e-ab99-7b39de6b7423" alt="">
         <p>Ooops, we don't seem to have any results for now, sorry!<p>
       </div>`

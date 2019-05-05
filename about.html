@@ -13,53 +13,136 @@
 	<title>CleanTweak</title>
 </head>
 <body>
-	<div class="container-fluid">
-		<nav class="mb-1 navbar navbar-expand-lg danger-color">
-			<a class="navbar-brand nav-link" href="index.html"><span class="sr-only">(current)</span> <img alt="logo" id="logo" src="images/Logo.png"></a>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="pricing.html">Pricing</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink-333">More Products</a>
-						<div aria-labelledby="navbarDropdownMenuLink-333" class="dropdown-menu dropdown-default">
-							<a class="dropdown-item" href="#">Free Trial</a> <a class="dropdown-item" href="#">Tier 1</a> <a class="dropdown-item" href="#">Tier 2</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contact</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav ml-auto nav-flex-icons">
-					<li class="nav-item">
-						<a class="nav-link waves-effect waves-light"><i class="fab fa-twitter"></i></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link waves-effect waves-light"><i class="fab fa-facebook"></i></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink-333"><i class="fas fa-user"></i></a>
-						<div aria-labelledby="navbarDropdownMenuLink-333" class="dropdown-menu dropdown-menu-right dropdown-default">
-							<a class="dropdown-item" href="#">Sign up</a> <a class="dropdown-item" href="#">Sign in</a> <a class="dropdown-item" href="#">Something else here</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</nav>
+<div class="">
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark danger-color-dark">
+		<!-- Navbar brand -->
+		<a class="navbar-brand" href="index.html"><img class="logonav" alt="logo" src="images/White.png"></a> <!-- Collapse button -->
+		 <button aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#basicExampleNav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> <!-- Collapsible content -->
+		<div class="collapse navbar-collapse" id="basicExampleNav">
+			<!-- Links -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pricing.html">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact</a>
+				</li><!-- Dropdown -->
+			</ul>
+			<ul class="navbar-nav ml-auto nav-flex-icons">
+				<li class="nav-item">
+					<a class="nav-link waves-effect waves-light"><i class="fab fa-twitter"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link waves-effect waves-light"><i class="fab fa-facebook"></i></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink-333"><i class="fas fa-user"></i></a>
+					<div aria-labelledby="navbarDropdownMenuLink-333" class="dropdown-menu dropdown-menu-right dropdown-default">
+						<a class="dropdown-item" href="#">Sign up</a> <a class="dropdown-item" href="#">Sign in</a> <a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+			</ul><!-- Links -->
+		</div><!-- Collapsible content -->
+	</nav>
 	</div>
-	<div class="container-fluid">
-		<h1>The Story Behind....</h1>
+	<div id="story">
+	<h1>The Story Behind....</h1>
+	<p>Over the last 4 years of doing digital marketing, we noticed a trend among our clients.
+	They were not able to achieve their marketing goals, yet they kept creating new content, and pushing it.
+	In fact, one of them had already published over 10,000 pieces of content.
+	What really was the problem? What could we really do about it?
+	For that client, we repackaged several pieces of content.
+	To our surprise, this content was even outdoing the newly created one.
+	The question lingered though...what would be a  <em>lasting solution?</em> </p>
 	</div>
+	<h1>Next...</h1>
 	<div class="container-fluid">
-	<div class="card-columns" id="output">
-	<div id="loader" class="spinner-border" role="status">
-  <span class="sr-only">Loading...</span>
+		<!-- Card deck -->
+		<div class="card-deck">
+
+  <!-- Card -->
+  		<div class="card mb-4">
+
+    <!--Card image-->
+    		<div class="view overlay">
+      		<img id="idea" class="card-img-top" src="images/Bulb.jpg" alt="Card image cap">
+      			<a href="#!">
+        			<div class="mask rgba-white-slight"></div>
+      			</a>
+    		</div>
+
+    <!--Card content-->
+    	<div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">The Idea...</h4>
+      <!--Text-->
+      <p class="card-text">How about something that can collate content?</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+    </div>
+
+  </div>
+  <!-- Card -->
+
+  <!-- Card -->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Card title</h4>
+      <!--Text-->
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+    </div>
+
+  </div>
+  <!-- Card -->
+
+  <!-- Card -->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Card title</h4>
+      <!--Text-->
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+    </div>
+
+  </div>
+  <!-- Card -->
+
 </div>
-	</div>
+<!-- Card deck -->
 </div>
 	<script src="js/scripts3.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
@@ -73,49 +156,27 @@
 	<footer class="page-footer font-small red pt-4">
 		<div class="container-fluid text-center text-md-left">
 			<div class="row">
-				<div class="col-md-6 mt-md-0 mt-3">
-					<h5 class="text-uppercase">CLEANTWEAK</h5>
-					<p>CleanTweak is a digital marketing tool that collates all your 'old'published content to allow your marketing team to repackage it the way that best suits your brand.</p>
+				<div id="cols" class="col-md-6 mt-md-0 mt-3">
+					<a href="index.html"><img class="logonav" alt="logo" src="images/White.png"></a><br>
+					<p>CleanTweak is a digital marketing tool that collates all your 'old'published content into one place, allowing your marketing team to repackage it the way that best suits your brand.</p>
 				</div>
 				<hr class="clearfix w-100 d-md-none pb-3">
-				<div class="col-md-3 mb-md-0 mb-3">
+				<div id="footerrow" class="col-md-6 mb-md-0 mb-3">
 					<h5 class="text-uppercase"></h5>
 					<ul class="list-unstyled">
 						<li>
-							<a href="#">About</a>
+							<a href="about.html">About</a>
 						</li>
 						<li>
 							<a href="pricing.html">Pricing</a>
 						</li>
 						<li>
-							<a href="#">More Products</a>
-						</li>
-						<li>
+
 							<a href="contact.html">Contact</a>
 						</li>
 					</ul>
 				</div>
-				<div class="col-md-3 mb-md-0 mb-3">
-					<h5 class="text-uppercase"></h5>
-					<ul>
-						<li>
-							<a href="#">Link 1</a>
-						</li>
-						<li>
-							<a href="#">Link 2</a>
-						</li>
-						<li>
-							<a href="#">Link 3</a>
-						</li>
-						<li>
-							<a href="#">Link 4</a>
-						</li>
-					</ul>
-				</div>
-				<div class="logoFooter">
-					<a href="index.html"><img src="images/Logo.png" alt="logo"><br></a><br>
-					<a class="nav-link waves-effect waves-light"><i class="fab fa-twitter"></i></a> <a class="nav-link waves-effect waves-light"><i class="fab fa-facebook"></i></a>
-				</div>
+
 			</div>
 			<div class="footer-copyright text-center py-3">
 				2019 Copyright: <a href="#">Lifeline Content Solutions</a>

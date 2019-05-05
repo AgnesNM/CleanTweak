@@ -1,12 +1,24 @@
 input{
   margin: 1%;
 }
+.logonav{
+  width:auto;
+  height:50px;
+  margin-bottom:1%;
+}
+#story{
+  text-align: center;
+  margin-left: 30%;
+  margin-right:30%;
+}
 button{
   background-color: #B22222;
   color:white;
   margin-top: 2%;
 }
-
+#footer-row{
+  float: right;
+}
 a{
   color:black;
 }
@@ -28,15 +40,22 @@ h1{
   height:60px;
   width:auto;
 }
+#idea{
+  height:200px;
+  width:400px;
+}
 #price{
   text-align: center;
 }
 .card-deck{
   margin-bottom: 2%;
 }
-@media screen and (max-width:767px) {
-  [.class="card"]{
-    width: 100%;
-    display: block;
-    }
+#demo{
+  text-align: center;
+}
+#modalbody{
+  text-align: left;
+}
+@media (min-width: 576px) {
+  display:block;
 }
