@@ -17,6 +17,10 @@ input{
 #missionwhy{
   margin-bottom: 2%;
 }
+#userform{
+  text-align: center;
+  align-items: center;
+}
 #plan{
   text-align: center;
 }
@@ -45,6 +49,8 @@ h1{
   overflow:hidden;
   height:10em;
   width:auto;
+  margin:2%
+  border:2%;
 }
 .card-body{
   overflow: hidden;
