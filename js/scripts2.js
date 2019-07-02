@@ -1,5 +1,4 @@
-var config = {
-    
+var config = {    
     authDomain: "clean-tweak.firebaseapp.com",
     databaseURL: "https://clean-tweak.firebaseio.com",
     projectId: "clean-tweak",
