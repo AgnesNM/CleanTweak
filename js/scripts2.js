@@ -1,5 +1,4 @@
-var config = {
-    apiKey: "AIzaSyCehocnWF1IKysSABX48Yv-XLbq6hLc_iQ",
+var config = {    
     authDomain: "clean-tweak.firebaseapp.com",
     databaseURL: "https://clean-tweak.firebaseio.com",
     projectId: "clean-tweak",
