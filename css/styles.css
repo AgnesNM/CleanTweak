@@ -76,6 +76,9 @@ h1{
 #modalbody{
   text-align: left;
 }
+.card{
+  margin-right: 1em;
+}
 @media (min-width: 576px) {
   display:block;
 }
