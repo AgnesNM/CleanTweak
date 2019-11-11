@@ -46,8 +46,4 @@ server.on('listening', () => {
     console.log('Listening on ' + bind);
 });
 
-if (port == null || port == "") {
-  port = 8000;
-}
-
 server.listen(port);
