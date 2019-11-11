@@ -46,4 +46,9 @@ server.on('listening', () => {
     console.log('Listening on ' + bind);
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+
 server.listen(port);
