@@ -1,8 +1,8 @@
-let express = require('express');
-const app = require('../app/app.js');
+const express = require('express');
+const app = express();
 
-let port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 
-app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
+app.listen(port, () => {
+    console.log(`App running on http://localhost: ${port}`);
 });
