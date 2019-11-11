@@ -1,5 +1,6 @@
 # CleanTweak
-CleanTweak is a digital marketing tool that collates all your old published content. This should help marketers and marketing teams to repackage it in the most creative ways possible. Find the deployed app here: https://murmuring-garden-42401.herokuapp.com/
+CleanTweak is a digital marketing tool that collates all your old published content. This should help marketers and marketing teams to repackage it in the most creative ways possible. Find the deployed app here: 
+(https://murmuring-garden-42401.herokuapp.com/)
 
 #### 13th April 2019
 #### Agnes Mwaniki (agnesndutamwaniki@gmail.com)
