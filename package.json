@@ -1,5 +1,5 @@
 {
-  "name": "CleanTweak",
+  "name": "cleantweak",
   "version": "1.0.0",
   "description": "CleanTweak is a digital marketing tool that collates all your old published content. This should help marketers and marketing teams to repackage it in the most creative ways possible.",
   "main": "server.js",
