@@ -55,9 +55,9 @@
 
 
 let express = require('express');
-let app = express();
-
 const app = require('../app');
+
+let app = express();
 
 let port = process.env.PORT || 8080;
 
