@@ -33,6 +33,9 @@ button{
   color:white;
   margin-top: 2%;
 }
+.loader{
+  display: none;
+}
 #footer-row{
   float: right;
 }
@@ -49,7 +52,7 @@ h1{
   overflow:hidden;
   height:10em;
   width:auto;
-  margin:2%
+  margin:2%;
   border:2%;
 }
 .card-body{
@@ -95,6 +98,9 @@ h1{
   }
 
 }
+
+
+
 @media only screen and (min-width: 577px) and (max-width: 960px) {
   body{
     background-color:		#FFFF66;
