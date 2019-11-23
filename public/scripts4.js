@@ -3,7 +3,7 @@
 const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
 
 const getUserInput = () => {
-    let userInputVal = document.getElementById('brandName').value;  
+    let userInputVal = document.querySelector('#brandName').value;  
     return userInputVal;  
 };
 
