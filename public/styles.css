@@ -48,12 +48,12 @@ h1{
 #clean{
   text-align: center;
 }
-.displayImg{
+/* .displayImg{
   overflow:hidden;
   height:10em;
   width:auto;
   margin:2%;
-  border:2%;
+  border:2%; */
 }
 .card-body{
   overflow: hidden;
@@ -99,11 +99,9 @@ h1{
 
 }
 
-
-
 @media only screen and (min-width: 577px) and (max-width: 960px) {
   body{
-    background-color:		#FFFF66;
+    background-color:	#FFFF66;
   }
 
 }
