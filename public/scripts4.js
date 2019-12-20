@@ -1,94 +1,60 @@
-// //display results
-
-// const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
-
-// const getUserInput = () => {
-//     let userInputVal = document.querySelector('#brandName').value;  
-//     return userInputVal;  
-// };
-
-// document.querySelector('#collate').addEventListener('click', () => {        
-//     const displResults = searchResults(getUserInput());    
-//     document.querySelector('#display').textContent = displResults;    
-// });
-
-    
-// const searchResults = (userInputVal) => {
-//     const url  = new URL("https://app.zenserp.com/api/v2/search?"),
-//         params = {q:userInputVal};
-//     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
-//     fetch(`${url}&apikey=${apiKey}`).then(response => response.json());     
-// }
-
-
-// //display unfiltered results on console via looping through the json data from the API
-
-// const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
-
-// const getUserInput = () => {
-//     let userInputVal = document.querySelector('#brandName').value;  
-//     return userInputVal;  
-// };
-
-// document.querySelector('#collate').addEventListener('click', () => {        
-//     searchResults(getUserInput());        
-        
-// });
-
-
-// const searchResults = (userInputVal) => {
-//     const url  = new URL("https://app.zenserp.com/api/v2/search?"),
-//         params = {q:userInputVal};
-//     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
-//     let result = fetch(`${url}&apikey=${apiKey}`);   
-//        result.then(response => {
-//         return response.json();
-//     }).then(userInputVal => {        
-//        let finalResult =  Object.values(userInputVal).forEach(value => {  
-//              console.log(value);                              
-//         });  
-//         // document.querySelector('#display').innerHTML = finalResult;  
-//     });
-// }    
-
-
-
-// //display unfiltered results on console via destructuring json data from the API
-
-
+//display filtered results via destructuring
 const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
 
 const getUserInput = () => {
-    let userInputVal = document.querySelector('#brandName').value;  
-    return userInputVal;  
+	let userInputVal = document.querySelector('#brandName').value;
+	return userInputVal;
 };
 
-document.querySelector('#collate').addEventListener('click', () => {        
-    searchResults(getUserInput());        
-        
+document.querySelector('#collate').addEventListener('click', () => {
+    searchResults(getUserInput());
+    
 });
 
-const finalData = (organic) => {
-    const {organic: [fifthItem]} = finalData;
-    const { organic: [position, videos]} = finalData;
-    const { organic: [{videos:title, url, parsed}]} = finalData;
-    const { organic: [{parsed: source, date, channel}]} = finalData;  
-    console.log(fifthItem);
-    console.log(position);
-    console.log(videos);
-    console.log(title,url,parsed);
-    console.log(source,date,channel)
-    
-}
-   
 const searchResults = (userInputVal) => {
-    const url  = new URL("https://app.zenserp.com/api/v2/search?"),
-        params = {q:userInputVal};
-    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
-    let result = fetch(`${url}&apikey=${apiKey}`);   
-    result.then(response => {
-     return response.json();
- }).then(finalData => {
-     console.log(finalData)
- });
-}    
+    
+	const url = new URL("https://app.zenserp.com/api/v2/search?"),
+		params = {
+			q: userInputVal
+		};
+	Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+	let data = fetch(`${url}&apikey=${apiKey}`);
+	data.then(response => {
+		return response.json();
+	}).then(results => {
+		const {
+			organic
+		} = results;
+		display(organic);
+	});
+}
+
+const display = (results) => {
+	let cardsArray = results.map((result) => {
+		//check if it has title,description,url
+		if (result.title && result.url && result.description) {
+			const {
+				title,
+				url,
+				description
+			} = result;
+			const card = `
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                        <h5 class="card-title">${title}</h5>
+                        <p class="card-text">
+                            ${description}
+                        </p>
+                        <button type="button" name="button">
+                            <a href= "${url}">Visit site</a>
+                        </button>
+                        </div>
+                    </div>  
+                </div>  
+                 `
+			return card;
+		} else {}
+	}).join('\n');
+	document.querySelector('#display').innerHTML = cardsArray;
+};
