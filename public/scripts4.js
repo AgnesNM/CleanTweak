@@ -34,7 +34,7 @@ const searchResults = (userInputVal) => {
 		display(organic);
 	})
 	.catch(err => console.log(`${err.stack}`));
-		const gif = document.querySelector('.spinner-grow').textContent;
+		const gif = document.querySelector('.gif').textContent;
 		document.querySelector('#display').innerHTML = gif;		
 }
 
