@@ -36,6 +36,10 @@ button{
 #loader{
   display: none;
 }
+.gif{
+  display:none;
+  /* text-align: center; */
+}
 #footer-row{
   float: right;
 }
