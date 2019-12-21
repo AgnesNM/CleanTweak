@@ -48,12 +48,9 @@ h1{
 #clean{
   text-align: center;
 }
-/* .displayImg{
-  overflow:hidden;
-  height:10em;
-  width:auto;
-  margin:2%;
-  border:2%; */
+#display-container{
+  display:flex;
+}
 
 .card-body{
   overflow: hidden;

@@ -38,9 +38,10 @@ const display = (results) => {
 				url,
 				description
 			} = result;
-			const card = `
-                <div class="col-md-3">
-                    <div class="card text-center">
+            const card = `
+		   
+                <div class="col-md-3 d-flex pb-4">
+                    <div class="card text-center d-flex">
                         <div class="card-body">
                         <h5 class="card-title">${title}</h5>
                         <p class="card-text">
@@ -50,11 +51,14 @@ const display = (results) => {
                             <a href= "${url}">Visit site</a>
                         </button>
                         </div>
-                    </div>  
-                </div>  
+                    </div> 
+                </div>
+			
+                
+                
                  `
 			return card;
 		} else {}
 	}).join('\n');
-	document.querySelector('#display').innerHTML = cardsArray;
+    document.querySelector('#display').innerHTML = cardsArray;
 };
