@@ -6,20 +6,25 @@ const getUserInput = () => {
 	return userInputVal;
 };
 
-document.querySelector('#collate').addEventListener('click', () => {
-    searchResults(getUserInput());
-    
+document.querySelector('#collate').addEventListener('click', () => {	
+    searchResults(getUserInput());    
 });
 
+const awaitResponse = () => {	
+	const loader = document.querySelector('.spinner-grow').textContent;
+	document.querySelector('#display').innerHTML = loader;
+};
+
 const searchResults = (userInputVal) => {
-    
+
 	const url = new URL("https://app.zenserp.com/api/v2/search?"),
 		params = {
 			q: userInputVal
 		};
 	Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 	let data = fetch(`${url}&apikey=${apiKey}`);
-	data.then(response => {
+	awaitResponse();
+	data.then(response => {		
 		return response.json();
 	}).then(results => {
 		const {
