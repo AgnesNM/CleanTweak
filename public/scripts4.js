@@ -7,13 +7,21 @@ const getUserInput = () => {
 };
 
 document.querySelector('#collate').addEventListener('click', () => {
+	awaitResponse();
 	searchResults(getUserInput());
 });
 
 const awaitResponse = () => {
-	const loader = document.querySelector('.spinner-grow').textContent;
-	document.querySelector('#display').innerHTML = loader;
+	//const loader = document.querySelector('.spinner-grow').textContent;
+	document.querySelector('#loader').style.display = 'block';
 };
+const notShowLoading = () => {
+	const outPutDom = document.querySelector('#output');
+	outPutDom.style.display = 'none';
+};
+
+
+
 
 
 const searchResults = (userInputVal) => {
@@ -24,18 +32,28 @@ const searchResults = (userInputVal) => {
 		};
 	Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 	let data = fetch(`${url}&apikey=${apiKey}`);
-	awaitResponse();
+	
 	data.then(response => {
+		//set the display to not show loading
+		notShowLoading();
 		return response.json();
 	}).then(results => {
-		const {
-			organic
-		} = results;
-		display(organic);
+		//if the results dont have  organic, its an error
+		const {	organic } = results;
+		if(organic){
+			display(organic);
+		}else {
+			throw Error("Result came back as none")
+		}
+		
 	})
-	.catch(err => console.log(`${err.stack}`));
-		const gif = document.querySelector('.gif').textContent;
-		document.querySelector('#display').innerHTML = gif;		
+	.catch(err =>{
+		console.log(err.message);
+		//const gif = document.querySelector('.gif').textContent;
+		document.querySelector('.gif').style.display = 'block';	
+		
+	});
+			
 }
 
 const display = (results) => {

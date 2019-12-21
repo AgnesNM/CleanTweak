@@ -83,24 +83,26 @@
 						 <button class="btn btn-danger" id="collate" name="button" type="submit">GET CONTENT</button>
 					</div>
 					<div class="container-fluid" id="display-container">
-						<div class="row d-flex" id="display"></div>
+						<div class="row d-flex" id="display">
+							<div class="text-center d-flex justify-content-center" id="loader">
+								<div class="spinner-grow fast text-danger" role="status">
+									<span class="sr-only">Loading...</span>
+								</div>			
+							</div>
+							<div class="gif">
+								<img src="200w.webp" alt="gif">
+								<p>Oops, there is no data to be displayed</p>
+							</div>
+							
+						</div>
+							
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" id="loader">
-			<div class="text-center d-flex justify-content-center" id="output">
-				<div class="spinner-grow fast text-danger" role="status">
-					<span class="sr-only">Loading...</span>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="gif">
-				<img src="200w.webp" alt="gif">
-				<p>Oops, there is no data to be displayed</p>
-			</div>		
-		</div>
+	
+		
+	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
 		</script> <!-- Bootstrap tooltips -->
 		 
