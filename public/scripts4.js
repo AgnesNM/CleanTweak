@@ -1,9 +1,9 @@
 //displaying a loader as we await results and a gif, if there are no results
 const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
 
-const getUserInput = () => {
-	let userInputVal = document.querySelector('#brandName').value;		
-		return userInputVal;	
+const getUserInput = () => {	
+		let userInputVal = document.querySelector('#brandName').value;			
+		return userInputVal; 		
 };
 
 document.querySelector('#collate').addEventListener('click', () => {	
@@ -30,14 +30,23 @@ const searchResults = (userInputVal) => {
 	data.then(response => {			
 		return response.json();
 	}).then(results => {		
-		const {	organic } = results;		
-			display(organic);					
+		const {	organic,number_of_results } = results;
+		if(number_of_results > 0){
+			display(organic);
+		}
+		else{
+			let err =  new Error('the search didnt find any results');
+			err.name = "no results";
+			throw err;
+		}		
+								
 	})
-	.catch(err =>{
-		console.log(err.stack);	 
-		document.querySelector('.gif').style.display = 'block';
-		document.querySelector('.spinner-grow').style.display = 'none';				
-		// throw new Error ('There are no results associated with your brand!');		
+	.catch(err =>{		
+		if (err.name === "no results"){		
+			document.querySelector('.gif').style.display = 'block';
+			document.querySelector('.spinner-grow').style.display = 'none';	
+		}
+		console.log(err.stack);				
 	});			
 }
 
