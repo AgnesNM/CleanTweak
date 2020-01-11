@@ -29,12 +29,16 @@ const searchResults = (userInputVal) => {
 	data.then(response => {			
 		return response.json();
 	}).then(results => {		
-		const {	organic } = results;
-		display(organic);		
+		const {	organic } = results;		
+			display(organic);
+				// if(!results){
+				// 	throw new Error ('There are no results associated with your brand!');
+				// }	
 	})
 	.catch(err =>{
-		console.log(err.stack);	 
+		console.log(err);	 
 		document.querySelector('.gif').style.display = 'block';
+		document.querySelector('.spinner-grow').style.display = 'none';
 	});			
 }
 
