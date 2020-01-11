@@ -2,8 +2,8 @@
 const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
 
 const getUserInput = () => {
-	let userInputVal = document.querySelector('#brandName').value;
-	return userInputVal;
+	let userInputVal = document.querySelector('#brandName').value;		
+		return userInputVal;	
 };
 
 document.querySelector('#collate').addEventListener('click', () => {	
@@ -23,22 +23,21 @@ const searchResults = (userInputVal) => {
 
 	Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 	let data = fetch(`${url}&apikey=${apiKey}`);
-
+	
+	
 	awaitResponse();
 
 	data.then(response => {			
 		return response.json();
 	}).then(results => {		
 		const {	organic } = results;		
-			display(organic);
-				// if(!results){
-				// 	throw new Error ('There are no results associated with your brand!');
-				// }	
+			display(organic);					
 	})
 	.catch(err =>{
-		console.log(err);	 
+		console.log(err.stack);	 
 		document.querySelector('.gif').style.display = 'block';
-		document.querySelector('.spinner-grow').style.display = 'none';
+		document.querySelector('.spinner-grow').style.display = 'none';				
+		// throw new Error ('There are no results associated with your brand!');		
 	});			
 }
 
