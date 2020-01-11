@@ -1,4 +1,4 @@
-//displaying a loader as we await results and a gif, if there are no results
+//display filtered results via destructuring
 const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
 
 const getUserInput = () => {
@@ -6,36 +6,54 @@ const getUserInput = () => {
 	return userInputVal;
 };
 
-document.querySelector('#collate').addEventListener('click', () => {	
+document.querySelector('#collate').addEventListener('click', () => {
+	// awaitResponse();
 	searchResults(getUserInput());
 });
 
 const awaitResponse = () => {
-	const loader = document.querySelector('.spinner-grow');
-	loader.style.display = 'block';
+	//const loader = document.querySelector('.spinner-grow').textContent;
+	document.querySelector('#loader').style.display = 'block';
 };
 
+const notShowLoading = () => {
+	const outPutDom = document.querySelector('#loader');
+	outPutDom.style.display = 'none';
+};
+
+
+
+
+
 const searchResults = (userInputVal) => {
+
 	const url = new URL("https://app.zenserp.com/api/v2/search?"),
 		params = {
 			q: userInputVal
 		};
-
 	Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 	let data = fetch(`${url}&apikey=${apiKey}`);
-
-	awaitResponse();
-
-	data.then(response => {			
+	
+	data.then(response => {
+		//set the display to not show loading
+		notShowLoading();
 		return response.json();
-	}).then(results => {		
+	}).then(results => {
+		//if the results dont have  organic, its an error
 		const {	organic } = results;
-		display(organic);		
+		if(organic){
+			display(organic);
+		}else {
+			throw Error("Result came back as none")
+		}
+		
 	})
 	.catch(err =>{
-		console.log(err.stack);	 
-		document.querySelector('.gif').style.display = 'block';
-	});			
+		console.log(err.stack);		
+		document.querySelector('.gif').style.display = 'block';	
+		
+	});
+			
 }
 
 const display = (results) => {
@@ -67,3 +85,4 @@ const display = (results) => {
 	}).join('\n');
 	document.querySelector('#display').innerHTML = cardsArray;
 };
+//Error handling

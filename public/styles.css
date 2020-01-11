@@ -33,12 +33,15 @@ button{
   color:white;
   margin-top: 2%;
 }
-#loader{
+
+#display-container{
+  display:flex;
+}
+.spinner-grow{
   display: none;
 }
 .gif{
-  display:none;
-  /* text-align: center; */
+  display:none;  
 }
 #footer-row{
   float: right;
@@ -52,9 +55,7 @@ h1{
 #clean{
   text-align: center;
 }
-#display-container{
-  display:flex;
-}
+
 
 .card-body{
   overflow: hidden;
