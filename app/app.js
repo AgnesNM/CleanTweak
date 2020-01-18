@@ -1,12 +1,13 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
+const connectDB = require ('/config.js');
 
 const mongoose = require('mongoose');
 const path = require ('path');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://Abby:gGaW1smEFP4bpx2j@cluster0-nayex.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://Abby:${connectDB}/test?retryWrites=true&w=majority`, {
     useUnifiedTopology:true,
     useNewUrlParser:true,
 }).then (()=> {
