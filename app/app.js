@@ -1,7 +1,7 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 require ('./config.js');
-require ('.src/server');
+require ('./src/server.js');
 
 
 const mongoose = require('mongoose');
