@@ -1,5 +1,5 @@
 //displaying a loader as we await results and a gif, if there are no results
-const apiKey = 'f4964f60-9be0-11e9-97f8-6d145d4cca4d';
+const apiKey = config.myAPI;
 
 const getUserInput = () => {	
 		let userInputVal = document.querySelector('#brandName').value;			
