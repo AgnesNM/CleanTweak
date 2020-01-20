@@ -1,5 +1,5 @@
 //displaying a loader as we await results and a gif, if there are no results
-import {myAPI} from '../config'
+
 
 let apiKey = `${myAPI.key}`;
 
