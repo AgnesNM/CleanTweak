@@ -1,7 +1,6 @@
 //displaying a loader as we await results and a gif, if there are no results
 
-
-let apiKey = `${myAPI.key}`;
+let apiKey = myAPI.key;
 
 const getUserInput = () => {	
 		let userInputVal = document.querySelector('#brandName').value;			
