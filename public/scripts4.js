@@ -1,4 +1,6 @@
 //displaying a loader as we await results and a gif, if there are no results
+require('dotenv').config({path:'nduta/Documents/after-moringa/CleanTweak/env/myAPI'});
+
 let apiKey = `${process.env.myAPI}`;
 
 const getUserInput = () => {	
