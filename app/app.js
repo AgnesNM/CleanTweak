@@ -26,4 +26,16 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+app.get('/apikey', req,res => {
+    res.send(result());
+})
+
+results = () => {
+    let nothing = '';
+    let apikey = process.env.apikey;
+    if (apikey != process.env.apikey){
+        return nothing;
+    }
+}
+
 module.exports = app;  
