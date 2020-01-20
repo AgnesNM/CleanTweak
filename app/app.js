@@ -1,4 +1,4 @@
-require('dotenv').config({path:'nduta/Documents/after-moringa/CleanTweak/env/vars'});
+require('dotenv').config({path:'nduta/Documents/after-moringa/CleanTweak/env/myAPI'});
 
 const express = require ('express');
 const bodyParser = require('body-parser');
