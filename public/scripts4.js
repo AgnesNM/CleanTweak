@@ -1,5 +1,5 @@
 //displaying a loader as we await results and a gif, if there are no results
-const apiKey = require('../config.js');
+let apiKey = `${process.env.myAPI}`;
 
 const getUserInput = () => {	
 		let userInputVal = document.querySelector('#brandName').value;			
