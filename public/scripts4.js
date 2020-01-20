@@ -1,7 +1,7 @@
 //displaying a loader as we await results and a gif, if there are no results
-require('dotenv').config({path:'nduta/Documents/after-moringa/CleanTweak/env/myAPI'});
+import {myAPI} from '../config'
 
-let apiKey = `${process.env.myAPI}`;
+let apiKey = `${myAPI.key}`;
 
 const getUserInput = () => {	
 		let userInputVal = document.querySelector('#brandName').value;			
