@@ -24,6 +24,6 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('dist'));
 
 module.exports = app;  
