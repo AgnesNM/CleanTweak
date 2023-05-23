@@ -4,8 +4,9 @@
   "description": "CleanTweak is a digital marketing tool that collates all your old published content. This should help marketers and marketing teams to repackage it in the most creative ways possible.",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",    
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,11 @@
     "body-parser": "^1.20.2",
     "dotenv": "^8.2.0",
     "express": "^4.18.2",
-    "heroku": "^8.1.3",
+    "heroku": "^7.3.0",
     "mongoose": "^5.13.17",
-    "path": "^0.12.7"
+    "netlify-lambda": "^2.0.16",
+    "path": "^0.12.7",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "webpack": "^5.82.1"
