@@ -26,8 +26,4 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-
-
-
-
 module.exports = app;  

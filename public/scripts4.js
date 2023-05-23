@@ -3,8 +3,8 @@
 let apiKey = window.__INITIAL_STATE__.key;
 
 const getUserInput = () => {	
-		let userInputVal = document.querySelector('#brandName').value;			
-		return userInputVal; 		
+	let userInputVal = document.querySelector('#brandName').value;			
+	return userInputVal; 		
 };
 
 document.querySelector('#collate').addEventListener('click', () => {	
@@ -16,10 +16,10 @@ const awaitResponse = () => {
 	loader.style.display = 'block';
 };
 
-const searchResults = (userInputVal) => {
-	const url = new URL("https://app.zenserp.com/api/v2/search?"),
+const searchResults = (userInput) => {
+	const url = new URL("https://app.zenserp.com/api/v2/search?"), //creates a new instance of the URLSearchParams object
 		params = {
-			q: userInputVal
+			q: userInput
 		};
 
 	Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
